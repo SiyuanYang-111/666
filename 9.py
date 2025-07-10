@@ -38,7 +38,7 @@ col1, col2 = st.sidebar.columns(2)
 with col1:
 # Nationality slider based on the student type
     if student_type == 'Domestic':
-        Nationality = st.slider("Nationality", 1, 1, 1)
+        Nationality = 1
     elif student_type == 'International':
         Nationality = st.slider("Nationality", 2, 21, 10)
     Marital = st.slider('Marital status', 1, 4, 1)

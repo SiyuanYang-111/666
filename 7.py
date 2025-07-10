@@ -28,16 +28,17 @@ st.markdown("""
 st.sidebar.subheader('Input features for single prediction')
 student_type = st.sidebar.radio("Select student type", ('Domestic', 'International'))
 
-# Nationality slider based on the student type
-if student_type == 'Domestic':
-    Nationality = st.slider("Nationality", 1, 21, 1)
-elif student_type == 'International':
-    Nationality = st.slider("Nationality", 2, 21, 10)
+
 
 # Use columns to divide into two parts
 col1, col2 = st.sidebar.columns(2)
 
 with col1:
+# Nationality slider based on the student type
+    if student_type == 'Domestic':
+        Nationality = st.slider("Nationality", 1, 21, 1)
+    elif student_type == 'International':
+        Nationality = st.slider("Nationality", 2, 21, 10)
     Marital = st.slider('Marital status', 1, 4, 1)
     Mode = st.slider('Application order', 1, 18, 9)
     Order = st.slider("Application order", 1, 5, 2)
